@@ -214,6 +214,14 @@ nav ul li:hover ul {
     background: rgba(197, 43, 15, 0.732);
     color: rgba(236, 29, 15, 0.732);
   }
+  #content-maintenir{
+    background: rgba(92, 163, 20, 0.732);
+    color:rgba(92, 163, 20, 0.732);
+  }
+  #content-integrer{
+    background: rgba(255, 128, 0,0.732);
+    color:rgba(255, 128, 0);
+  }
 
 
   .content-box .card-title {
@@ -545,9 +553,9 @@ footer a:hover {
 
 .container {
   display: flex;
-  height: 100vh; /* Remplir toute la hauteur de la fenêtre */
+  min-height: 100vh; /* Hauteur minimum de 100vh mais peut s'agrandir */
   width: 100%;
-  color:white;
+  color: white;
 }
 
 /* Partie gauche avec titre et texte */
@@ -580,7 +588,7 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Remplir toute la hauteur */
+   
 }
 
 .right img {
