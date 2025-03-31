@@ -1,0 +1,590 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: transparent; /* Pas de fond global */
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+  position: relative;
+  text-align: center;
+  padding: 20px 0; /* Espacement autour du texte */
+  margin-top: 50px;
+  margin-bottom: -100px;
+}
+
+/* Texte du header */
+header h1 {
+  margin: 0;
+  font-size: 4rem; /* Taille du texte */
+  font-weight: 700; /* Poids de la police */
+  text-transform: uppercase; /* Met le texte en majuscules */
+  color: #d9d7d7; /* Couleur du texte */
+  font-family:'Karla';
+}
+
+/* Barres horizontales */
+header::before,
+header::after {
+  content: '';
+  position: absolute;
+  width: 800px; /* Largeur des barres */
+  height: 4px; /* Hauteur des barres */
+  background-color: white; /* Couleur des barres */
+  left: 50%; /* Centrer les barres */
+  transform: translateX(-50%); /* Ajuster pour centrer */
+}
+
+/* Barre en haut */
+header::before {
+  top: 0;
+}
+
+/* Barre en bas */
+header::after {
+  bottom: 0;
+}
+
+nav {
+    position: fixed;
+    right: 10px;
+    top: 100px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+nav ul li {
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto Mono';
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(31, 73, 163, 0.8);
+    color: #fff;
+}
+
+nav ul li ul {
+               
+
+    max-height: 0; 
+    overflow: hidden; /* hide content */
+    transition: max-height 0.5s ease-out; /* Transi */
+    background-color: rgb(28, 21, 46);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+nav ul li ul li {
+    margin: 0;
+}
+nav ul li:hover ul {
+    display: block;
+    position: static;
+    max-height: 300px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.search-bar button {
+    padding: 11px;
+    background-color: rgba(168, 148, 224, 0.8);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #91498a;
+}
+
+
+.cards-container {
+    z-index:100;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: nowrap;  /* Les cartes ne passeront pas à la ligne suivante */
+    overflow-x: hidden;  /* Permet aux cartes de défiler horizontalement */
+    margin-bottom: 200px;
+    gap: 2rem;
+    padding: 2rem;
+    scroll-behavior: smooth;
+    /*transform: translateX(-50%);   */
+    transition: transform 0.5s ease;
+    
+}
+
+.parent {
+    width: 60%;
+    padding: 20px;
+    perspective: 1000px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 50px;
+    /* border-radius: 10px; */
+    border: 3px solid rgb(255, 255, 255);
+    transform-style: preserve-3d;
+    background: linear-gradient(135deg,#0000 18.75%,#cedefb 0 31.25%,#0000 0),
+        repeating-linear-gradient(45deg,#cedefb -6.25% 6.25%,#ffffff 0 18.75%);
+    background-size: 60px 60px;
+    background-position: 0 0, 0 0;
+    background-color: #cedefb;
+    width: 500px;
+    box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .card:hover {
+    background-position: -100px 100px, -100px 100px;
+    transform: rotate3d(0.5, 1, 0, 30deg);
+  }
+
+  .image-box{
+    width: 100%; 
+    height: 200px; 
+    overflow: hidden;
+  }
+  .image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste l'image à la taille de la boîte */
+    display: block;
+  }
+  
+  .content-box{
+    
+    /* border-radius: 10px 100px 10px 10px; */
+    transition: all 0.5s ease-in-out;
+    padding: 60px 25px 25px 25px;
+    transform-style: preserve-3d;
+    
+  }
+
+  #content-concevoir{
+    background: rgba(18, 119, 150, 0.732);
+    color: rgb(7, 185, 255);
+  }
+  #content-verifier{
+    background: rgba(197, 43, 15, 0.732);
+    color: rgba(236, 29, 15, 0.732);
+  }
+
+
+  .content-box .card-title {
+    display: inline-block;
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 50px);
+  }
+  
+  .content-box .card-title:hover {
+    transform: translate3d(0px, 0px, 60px);
+  }
+  
+  .content-box .card-content {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #f2f2f2;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 30px);
+  }
+  
+  .content-box .card-content:hover {
+    transform: translate3d(0px, 0px, 60px);
+  }
+  
+  .content-box .see-more {
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+    font-weight: 900;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: rgb(7, 185, 255);
+    /* border-radius: 5px; */
+    background: white;
+    padding: 0.5rem 0.7rem;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 20px);
+  }
+  
+  .content-box .see-more:hover {
+    transform: translate3d(0px, 0px, 60px);
+  }
+
+.toggle-button {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+        background-color: #ffffff;
+        
+        border-radius: 5px;
+        cursor: pointer;    
+        transition: background-color 0.3s ease;
+    }
+
+    .toggle-button:hover {
+        background-color: #ffffff70;
+        color:rgb(228, 235, 238);
+    }
+
+    /* Checkbox cachée */
+    .toggle-checkbox {
+        display: none;
+    }
+
+    .card-project-content{
+        display: none; /* Caché par défaut */
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+
+
+    #toggle1:checked ~ #section2-BUT1 {
+        display: block;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+   .competence-box {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: auto;
+    width: auto;
+    background: white;
+    border: 1px solid rgb(7, 185, 255);
+    /* border-radius: 10px; */
+    padding: 10px;
+    transform: translate3d(0px, 0px, 80px);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
+  }
+  
+  .competence-box span {
+    display: block;
+    text-align: center;
+  }
+  
+  
+  
+  .competence-box .name {
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(4, 193, 250);
+  }
+
+
+   
+
+/*.main{
+    background: linear-gradient(135deg, rgba(68, 79, 172, 0.8), #2c1bc4);
+}
+*/
+.hidden {
+  display: none;
+}
+
+
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(10, 10, 10, 0.8);
+  color: #fff;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  position: relative; /* Le footer reste dans la structure flex */
+}
+
+footer p {
+  margin: 0;
+  opacity: 0.7;
+}
+
+footer a {
+  color: #a0a0a0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(0);
+        transform-origin: 50% 50%;
+        text-shadow: none;
+      }
+      100% {
+        transform: translateY(50px);
+        transform-origin: 50% 50%;
+      }
+  }
+
+
+/* Wrapper de la scène, centré */
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px; /* Pour ajouter la profondeur 3D */
+  overflow: hidden;
+}
+
+/* Scène contenant les cartes */
+.inner {
+  --w: 200px; /* Largeur des cartes */
+  --h: 300px; /* Hauteur des cartes */
+  --translateZ: 300px; /* Distance depuis le centre */
+  --rotateX: -15deg; /* Inclinaison du cercle */
+  
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+  transform-style: preserve-3d;
+  animation: rotating 10s linear infinite;
+}
+
+/* Animation de rotation des cartes */
+@keyframes rotating {
+  from {
+    transform: rotateX(var(--rotateX)) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(var(--rotateX)) rotateY(1turn);
+  }
+}
+
+/* Positionnement des cartes sur le cercle */
+.card_rotate {
+  position: absolute;
+  width: var(--w);
+  max-width: 300px;
+  height: var(--h);
+  border: 2px solid rgba(var(--color-card), 1);
+  border-radius: 12px;
+  
+  /* Calcul dynamique de la rotation pour chaque carte */
+  transform: rotateY(calc(360deg / var(--quantity) * var(--index))) translateZ(var(--translateZ));
+  background: rgba(var(--color-card), 0.7);
+  transition: transform 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Contenu de chaque carte */
+.card-content {
+  display: flex;
+  flex-direction: column; /* Alignement vertical des éléments */
+  align-items: center; /* Centre les éléments horizontalement */
+  justify-content: space-between; /* Espacement entre le titre et l'image */
+  height: 100%; /* Prend toute la hauteur de la carte */
+}
+
+/* Titre sur la carte */
+.title {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px; /* Espacement sous le titre */
+}
+
+/* Style de l'image dans les cartes */
+.card_rotate img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px; /* Espacement entre l'image et le titre */
+  overflow: hidden;
+}
+
+/* Style des images dans les cartes */
+.card_rotate .img {
+  width: 100%;
+  height: 60%; /* Modifier la hauteur de l'image si nécessaire */
+  background: #0000 radial-gradient(circle, rgba(var(--color-card), 0.2) 0%, rgba(var(--color-card), 0.6) 80%, rgba(var(--color-card), 0.9) 100%);
+}
+
+.screen0 {
+  
+  background-image: 
+    radial-gradient(circle at center center, black, #ccc), /* Dégradé radial noir vers gris */
+    repeating-radial-gradient(circle at center center, black, black, 1rem, transparent 2rem, transparent 1rem); /* Motif répétitif de cercles noirs sur fond transparent */
+  background-blend-mode: multiply; /* Fusion des deux backgrounds */
+  margin-bottom: -100px;
+}
+/* Screen avec rayures bleues et fond sombre sur les bords */
+.screen1 {
+  position: relative;
+  background-image: 
+    radial-gradient(
+      ellipse at center, 
+      rgba(0,33,82,1) 0%, 
+      rgba(0,0,0,1) 100%
+    ),
+    repeating-linear-gradient(
+      45deg, 
+      transparent, 
+      transparent 1px, 
+      rgba(0, 0, 0, .8) 10px, 
+      rgba(255, 255, 255, 1) 10px
+    ); /* Rayures et dégradé */
+  background-blend-mode: multiply;  /* Combine les deux backgrounds */
+  background-size: 20px 20px; /* Taille des rayures */
+}
+
+.screen2{
+  position: relative;
+  background-image: 
+    radial-gradient(
+      ellipse at center, 
+      darkgreen 0%, 
+      rgba(0,0,0,1) 100%
+    ),
+    repeating-linear-gradient(
+      -45deg, 
+      transparent, 
+      transparent 1px, 
+      rgba(0, 0, 0, .8) 10px, 
+      rgba(255, 255, 255, 1) 10px
+    ); /* Rayures et dégradé */
+  background-blend-mode: multiply;  /* Combine les deux backgrounds */
+  background-size: 20px 20px; /* Taille des rayures */
+  overflow: hidden;
+
+
+  
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  text-align: center; /* Pour centrer le texte */
+}
+
+.screen0, .screen1 {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Remplir toute la hauteur de la fenêtre */
+  width: 100%;
+  color:white;
+}
+
+/* Partie gauche avec titre et texte */
+.left {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+}
+
+.left h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: rgb(188, 188, 188);
+  text-align: left; /* Centrer le texte à gauche */
+  margin-bottom: 20%;
+}
+
+.left p {
+  font-size: 1.5rem;
+  color: white;
+  
+}
+
+/* Partie droite avec image */
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Remplir toute la hauteur */
+}
+
+.right img {
+  width: 100%; /* L'image prendra toute la largeur de la section */
+  height: 100%; /* L'image prendra toute la hauteur de la section */
+  object-fit: cover; /* L'image couvre toute la section sans distorsion */
+}
