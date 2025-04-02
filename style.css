@@ -1,6 +1,4 @@
 body {
-  /*background: linear-gradient(135deg, #6c63ff, #3b3a40);
-  background-size: cover;*/
   color: #f0f0f0;
   font-family: 'Agdasima', sans-serif;
   margin: 0;
@@ -132,7 +130,7 @@ nav ul li:hover ul {
 
 .shrink {
   transform: scale(0.5); /* Réduit la taille du cercle à 50% */
-  background-color: green; /* Change la couleur du cercle */
+  background-color: green; 
 }
 
 .cursor-buble{
@@ -260,7 +258,7 @@ background-position: center;
 }
 
 #section1 {
-position: relative; /* Nécessaire pour superposer le contenu au-dessus de la vidéo */
+position: relative; 
 min-height: 100vh;
 display: flex;
 flex-direction: column;
@@ -286,7 +284,7 @@ z-index: -1; /* Place la vidéo derrière le contenu */
   background: rgb(2,0,36);
   background: linear-gradient(186deg, rgba(2,0,36,1) 0%, rgba(22,22,130,1) 82%, rgba(173,76,205,1) 100%);
   position: relative;
-  min-height: 70vh; /* Définit la hauteur à la hauteur de la fenêtre */
+  min-height: 70vh; 
 }
 
 #section2::before {
@@ -295,7 +293,7 @@ z-index: -1; /* Place la vidéo derrière le contenu */
   top: 0; /* Placer l'effet de fondu en haut */
   left: 0;
   width: 100%;
-  height: 50%; /* Hauteur du fondu en haut de la section */
+  height: 50%; 
   background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.8)); /* Fondu sombre vers le haut */
 }
 
@@ -312,7 +310,7 @@ z-index: -1; /* Place la vidéo derrière le contenu */
 
 
 #section3 {
-  /*background: url('images/BG_site_accueil4.png') no-repeat center center/cover;*/
+  
   background: url('images/Cloud_bg3.jpg') no-repeat center center/cover;
   min-height: 120vh;
   display: flex;
@@ -320,7 +318,7 @@ z-index: -1; /* Place la vidéo derrière le contenu */
 }
 #section4 {
 
-position: relative; /* Nécessaire pour superposer le contenu au-dessus de la vidéo */
+position: relative; 
 min-height: 100vh;
 display: flex;
 flex-direction: column;
@@ -337,7 +335,7 @@ left: 0;
 width: 100%;
 height: 20px; /* L'épaisseur du fondu */
 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent); /* Le dégradé du fondu */
-z-index: 0; /* Pour s'assurer que le dégradé se place au-dessus de la vidéo */
+z-index: 0; /* le dégradé se place au-dessus de la vidéo */
 }
 
 .info-section {
@@ -394,8 +392,8 @@ section.card {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 300px; /* Largeur cohérente pour chaque carte */
-  height: auto; /* Hauteur automatique selon le contenu */
+  width: 300px; 
+  height: auto; 
   background-color: #771d9b;
   border-radius: 10px;
   align-items: center;
@@ -403,7 +401,7 @@ section.card {
   overflow: hidden;
   perspective: 1000px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  min-height: 300px; /* Hauteur minimale pour la carte */
+  min-height: 300px; /* Hauteur min */
 }
 
 .card:hover {
@@ -434,7 +432,7 @@ section.card {
 .card__title {
   margin: 0;
   padding-left: 5px;
-  font-size: 20px; /* Taille réduite pour s'adapter */
+  font-size: 20px; 
   color: white;
   font-weight: 700;
 }
@@ -446,27 +444,20 @@ section.card {
   line-height: 1.4;
 }
 
-/* Container des cartes */
+/* Container des cards */
 .card-parcours {
   display: flex;
-  justify-content: space-evenly; /* Espace uniforme entre les cartes */
+  justify-content: space-evenly; /* Espace uniforme  */
   flex-wrap: nowrap; /* Empêche les cartes de passer à la ligne */
-  gap: 20px; /* Espacement entre les cartes */
+  gap: 20px; 
   margin: 3%;
-  width: 100%; /* Prend toute la largeur disponible */
-  overflow-x: auto; /* Permet de faire défiler horizontalement si nécessaire */
+  width: 100%; 
+  overflow-x: auto; 
 }
 
 section.card:nth-child(odd) {
-  transform: translateY(20px); /* Décale vers le bas (ajuste la valeur selon ton besoin) */
+  transform: translateY(20px); 
 }
-
-
-
-
-
-
-
 
 .container-checkbox{
 display: flex;
@@ -568,8 +559,8 @@ display: block;
 #section3 {
   display: flex;
   justify-content: space-between;
-  gap: 20px; /* Ajoute un peu d'espace entre les deux blocs */
-  align-items: center; /* Aligne les éléments au même niveau en haut */
+  gap: 20px; 
+  align-items: center; /* Aligne les éléments  */
 }
 
 
@@ -581,11 +572,11 @@ margin-left: 5%;
 }
 .right-container {
   margin: 5%;
-  width: 35%; /* Ajuste la largeur à ta convenance */
+  width: 35%; 
   display: flex;
-  flex-direction: column; /* Met les cards en colonne */
-  gap: 20px; /* Espacement entre les cards */
-  align-items: center; /* Centre le contenu horizontalement */
+  flex-direction: column; 
+  gap: 20px; 
+  align-items: center; 
   
 }
 
@@ -593,10 +584,10 @@ margin-left: 5%;
   text-align: center; /* Centre le texte */
   width: 100%;
   display: flex;
-  justify-content: center; /* Ajoute un vrai centrage */
+  justify-content: center; 
 }
 
-/* Style de base des cartes */
+/* Style de base des cards */
 .cards {
   display: flex;
   flex-direction: column;
@@ -614,18 +605,18 @@ margin-left: 5%;
   transition: 400ms;
   padding: 20px;
   display: flex;
-  align-items: center; /* Centre bien le contenu */
-  flex-direction: column; /* En colonne par défaut */
+  align-items: center; 
+  flex-direction: column; /* En colonne  */
 }
 
-/* Contenu structuré (image à gauche, texte à droite) */
+
 .news-card-content {
-  display: flex; /* Met en ligne */
-  align-items: center; /* Centre verticalement */
+  display: flex; 
+  align-items: center; 
   width: 100%;
 }
 
-/* Image */
+
 .news-image-container {
   flex: 0 0 120px; /* Taille fixe */
   height: 100px;
@@ -637,13 +628,12 @@ margin-left: 5%;
 
 .news-image-container img {
   width: 100%;
-  height: auto; /* Permet à l'image de garder ses proportions */
-  max-height: 100px; /* Fixe une hauteur max */
-  object-fit: contain; /* Ajuste l’image pour qu’elle ne soit pas coupée */
+  height: auto; /*garde les proportions */
+  max-height: 100px; /* hauteur max */
+  object-fit: contain; /* fit pour qu’elle ne soit pas coupée */
   border-radius: 8px;
 }
 
-/* Texte */
 .news-text-container {
   flex-grow: 1;
   padding-left: 20px;
@@ -661,7 +651,6 @@ margin-left: 5%;
   font-size: 1em;
 }
 
-/* Effets hover */
 .cards .card:hover {
   transform: scale(1.05);
 }
@@ -670,10 +659,6 @@ margin-left: 5%;
   filter: blur(5px);
   transform: scale(0.9, 0.9);
 }
-
-
-/* Style des couleurs de fond pour chaque card */
-
 
 /* Animation avant sur les cards */
 .card::before {
@@ -711,9 +696,9 @@ overflow: hidden;
 }
 
 .aboutme-block-text {
-  margin: 10% 5% 0% 5%; /* Marges autour du bloc */
-  width: 100%; /* Prend tout l'espace restant */
-  height: auto; /* Hauteur automatique */
+  margin: 10% 5% 0% 5%; 
+  width: 100%; 
+  height: auto; 
   padding-bottom: 200px;
   background-image: linear-gradient(180deg, #361244, #694f75); /* Dégradé de fond */
   padding: 20px;
@@ -794,24 +779,24 @@ display: flex;
 opacity: 1;
 }
 .aboutme-block-text.animated span {
-display: none; /* Supprime les lettres après l'animation */
+display: none; 
 }
 
-/* Animation pour agrandir la taille */
+
 @keyframes growFont {
 0% {
-  transform: scale(1); /* Taille initiale */
+  transform: scale(1); 
   opacity: 0;
 }
 12% {
   opacity: 1;
 }
 25% {
-  transform: scale(1.5); /* Taille finale */
+  transform: scale(1.5); 
   opacity: 1;
 }
 37% {
-  transform: scale(1); /* Taille finale */
+  transform: scale(1); 
   opacity: 1;
 }
 50%{
@@ -831,25 +816,6 @@ display: none; /* Supprime les lettres après l'animation */
 }
 
 }
-/*
-@keyframes scale-content{
-0% {
-  width: auto;
-  height: auto;
-}
-100% {
-   
-  width: 30%;  Taille initiale du conteneur 
-  height: 50%;
-}
-
-}
-*/
-
-
-
-
-
 .card-selection {
 
 z-index: 10;
@@ -878,8 +844,6 @@ font-size: 2em;
 z-index: 20;
 color: white;
 font-size: 1rem;
-
-
 }
 
 .slide-up-left {
@@ -889,7 +853,6 @@ font-size: 1rem;
 .animate-pop-up-bottom {
 animation: animate-pop-up-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
 }
-
 #container {
   width: 100%;
   height: 20vh;
@@ -904,7 +867,6 @@ animation: animate-pop-up-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5
   position: absolute;
   transition: transform 0.1s ease-out;
 }
-
 
 /*https://animista.net/play/basic/slide/slide-top*/
 
@@ -942,6 +904,7 @@ animation: animate-pop-up-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5
   transform: translateY(-20px);
 }
 }
+
 /* scale up*/
 .scale-down-to-up {
   animation: scale-up-ver-bottom 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -954,68 +917,5 @@ animation: animate-pop-up-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5
 100% {
   transform: scaleY(1);
   transform-origin: 0% 100%;
-}
-}
-
-
-/* Styles pour les écrans plus petits (téléphones) */
-@media (max-width: 768px) {
-header {
-    font-size: 1.5rem;
-    padding: 10px;
-}
-
-nav {
-    width: 100%;
-    position: static;
-    padding: 10px;
-    text-align: center;
-}
-
-nav ul {
-    flex-direction: column;
-    padding: 0;
-}
-
-nav ul li {
-    margin-bottom: 10px;
-}
-
-nav ul li a {
-    padding: 10px;
-    font-size: 14px;
-}
-
-.search-bar {
-    flex-direction: column;
-}
-
-main {
-    padding: 20px;
-    max-width: 100%;
-}
-
-.info-section {
-    flex-direction: column;
-    gap: 10px;
-}
-
-.info-card {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-.card {
-    width: 90%;
-    margin: 10px auto;
-}
-
-#moving-text {
-    font-size: 20px;
-}
-
-footer {
-    font-size: 0.8em;
 }
 }
