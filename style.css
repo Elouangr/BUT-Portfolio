@@ -141,7 +141,7 @@ nav ul li:hover ul {
   position: absolute;
   border-radius: 50%;
   background-color: white;
-  /*mix-blend-mode: difference;*/
+  mix-blend-mode: difference;
   transition: background-color 100s;
 }
 .cursor-buble.active {
